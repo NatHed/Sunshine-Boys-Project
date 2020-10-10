@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Contact Us</string>
+    <string name="github"> Example link </string>
+    <string name="pNumber" > 416.675.6622 ext. 5964 </string>
+    <string name="eMail" >sunshineboysapp@gmail.com</string>
+    <string name="contactUs" > Contact Us</string>
+</resources>
