@@ -8,11 +8,8 @@ import android.widget.TextView;
 import android.net.Uri;
 import android.view.View;
 import android.widget.Toast;
-import android.util.Log;
 
 public class ContactPageActivity extends AppCompatActivity {
-
-    private TextView eTo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,25 +51,16 @@ public class ContactPageActivity extends AppCompatActivity {
 
 
     public void Email(View v) {
-        // Find the EditText by its unique ID
         TextView e = (TextView) findViewById(R.id.EmailAddress);
 
-        // show() method display the toast with message
-        // "clicked"
         Toast.makeText(this, "clicked", Toast.LENGTH_LONG)
                 .show();
 
-        // Use format with "tel:" and phoneNumber created is
-        // stored in u.
         Uri u = Uri.parse(e.getText().toString());
 
-
-        // Create the intent and set the data for the
-        // intent as the Email.
         Intent emailIntent = new Intent(Intent.ACTION_SEND, u);
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {String.valueOf(u)}); // recipients
         emailIntent.setType("message/rfc822");
-
-
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."));
@@ -83,6 +71,27 @@ public class ContactPageActivity extends AppCompatActivity {
 
 
     }
+
+    public void goToLink(View v){
+
+        TextView e = (TextView) findViewById(R.id.Git);
+
+        Toast.makeText(this, "clicked", Toast.LENGTH_LONG)
+                .show();
+
+        Uri u = Uri.parse(e.getText().toString());
+
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, u);
+        try {
+            startActivity(Intent.createChooser(launchBrowser, "Visit URL..."));
+            finish();
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(ContactPageActivity.this, "There is no browser installed.", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+
 }
 
 

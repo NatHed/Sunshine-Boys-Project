@@ -23,15 +23,15 @@
         android:id="@+id/EmailAddress"
         android:layout_width="300sp"
         android:layout_height="30sp"
-        android:layout_marginStart="108dp"
+        android:layout_marginStart="92dp"
+        android:onClick="Email"
         android:text="@string/eMail"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:onClick="Email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintVertical_bias="0.549" />
 
     <ImageView
         android:id="@+id/GitLogo"
@@ -39,6 +39,7 @@
         android:layout_height="50sp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/githublogo"
+        android:onClick="goToLink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Git"
         app:layout_constraintHorizontal_bias="0.186"
@@ -50,13 +51,13 @@
         android:id="@+id/number"
         android:layout_width="200sp"
         android:layout_height="30dp"
+        android:onClick="Call"
         android:text="@string/pNumber"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:onClick="Call"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.409" />
@@ -69,23 +70,24 @@
         android:text="@string/github"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:onClick="goToLink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmailAddress"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.088" />
 
     <ImageView
         android:id="@+id/EmailImage"
         android:layout_width="65sp"
         android:layout_height="50sp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:contentDescription="@string/app_name"
         android:onClick="Email"
         android:src="@android:drawable/ic_dialog_email"
         app:layout_constraintEnd_toStartOf="@+id/EmailAddress"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phoneImage"
         app:tint="#000000" />
