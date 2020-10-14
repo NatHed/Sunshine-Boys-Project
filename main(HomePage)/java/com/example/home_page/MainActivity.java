@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         data = new ArrayList<Model>();
         data.add(new Model
                 ("Temperature","0"));
+        data.add(new Model("Humidity","40%"));
+        data.add(new Model("Air Pressure","100kpa"));
+        data.add(new Model("Wind Speed","10 Kmh"));
+
         Adapter winfo = new Adapter(data,MainActivity.this);
         recyclerView.setAdapter(winfo);
     }
