@@ -2,6 +2,7 @@ package weather.app.simpleweather;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,7 +14,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -34,7 +37,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         firebaseAuth = FirebaseAuth.getInstance();
-
 
         //Jeremy's Code
 
@@ -57,10 +59,31 @@ public class HomeActivity extends AppCompatActivity {
         Adapter winfo = new Adapter(data,HomeActivity.this);
         recyclerView.setAdapter(winfo);
 
-
+        BottomNavigationView bottomNavigationView1 = (BottomNavigationView) findViewById(R.id.bottom_navi);
+        bottomNavigationView1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_home:
+                        Toast.makeText(HomeActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(HomeActivity.this, HomeActivity.class));
+                        break;
+                    case R.id.action_contact:
+                        Toast.makeText(HomeActivity.this, "@string/contactUs", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(HomeActivity.this, ContactUsActivity.class));
+                        break;
+                    case R.id.action_about:
+                        Toast.makeText(HomeActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(HomeActivity.this, AboutActivity.class));
+                        break;
+                }
+                return true;
+            }
+        });
     }
 
-   /* @Override
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -101,5 +124,5 @@ public class HomeActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    */
+
 }

@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
                     progressDialog.dismiss();
                     Toast.makeText(MainActivity.this,"Login Successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this,BottomNavigation.class));
+                    startActivity(new Intent(MainActivity.this,HomeActivity.class));
                 }else{
 
                     Toast.makeText(MainActivity.this,"Login Failed, try again", Toast.LENGTH_SHORT).show();
