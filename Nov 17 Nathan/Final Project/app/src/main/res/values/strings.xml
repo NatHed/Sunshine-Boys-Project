@@ -22,6 +22,27 @@
     <string name="githublink"><a href="https://github.com/NatHed/Sunshine-Boys-Project.git">https://github.com/NatHed/Sunshine-Boys-Project.git/</a></string>
     <string name="aboutUs">About Us</string>
     <string name="homePage">Home</string>
+    <string name="credentials">Please wait we are checking your credentials</string>
+    <string name="login">Login Successful</string>
+    <string name="faillogin">Login Failed, try again</string>
+    <string name="temperature">Temperature</string>
+    <string name="airpressure">Air Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="windspeed">Wind Speed</string>
+    <string name="details">Please enter all the details</string>
+    <string name="exit">Are you sure you want to exit this App?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="email">Please enter your Email</string>
+    <string name="passreset">Password reset link has been sent!!</string>
+    <string name="linkerror">Error sending the reset link</string>
+    <string name="permission">Please allow the app permission</string>
+    <string name="registersuccess">Registration Successful</string>
+    <string name="registerunsuccess">Registration Unsuccessful, Please Try Again</string>
+    <string name="vemail">please verify your Email Address</string>
+    <string name="name">Please enter a correct Name</string>
+    <string name="password">please verify your Password </string>
+
 
 
 

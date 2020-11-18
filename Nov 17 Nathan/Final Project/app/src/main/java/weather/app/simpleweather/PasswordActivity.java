@@ -78,10 +78,13 @@ public class PasswordActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String useremail = EmailResetPassword.getText().toString().trim();
+                String email = getString(R.string.email);
+                final String passreset = getString(R.string.passreset);
+                final String linkerror = getString(R.string.linkerror);
 
                 if(useremail.equals("")){
 
-                    Toast.makeText(PasswordActivity.this,"Please enter your email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PasswordActivity.this,email, Toast.LENGTH_SHORT).show();
 
                 }else{
 
@@ -91,12 +94,12 @@ public class PasswordActivity extends AppCompatActivity {
 
                            if(task.isSuccessful()){
 
-                               Toast.makeText(PasswordActivity.this, "Password reset link has been sent!!", Toast.LENGTH_SHORT).show();
+                               Toast.makeText(PasswordActivity.this, passreset, Toast.LENGTH_SHORT).show();
                                finish();
                                startActivity(new Intent(PasswordActivity.this, MainActivity.class));
                            }else {
 
-                               Toast.makeText(PasswordActivity.this, "Error sending the reset link", Toast.LENGTH_SHORT).show();
+                               Toast.makeText(PasswordActivity.this, linkerror, Toast.LENGTH_SHORT).show();
 
                            }
                        }
@@ -110,6 +113,7 @@ public class PasswordActivity extends AppCompatActivity {
 
     public void askPermission(final Context c){
 
+        final String permission = getString(R.string.permission);
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
 
             if(Settings.System.canWrite(c)){
@@ -129,7 +133,7 @@ public class PasswordActivity extends AppCompatActivity {
                 }, DELAY);
 
 
-                Toast.makeText(PasswordActivity.this, "Please allow the app permission", Toast.LENGTH_LONG).show();
+                Toast.makeText(PasswordActivity.this, permission, Toast.LENGTH_LONG).show();
 
             }
 

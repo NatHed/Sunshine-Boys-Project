@@ -47,14 +47,19 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
+        String temp = getString(R.string.temperature);
+        String humid = getString(R.string.humidity);
+        String apressure = getString(R.string.windspeed);
+        String wspeed = getString(R.string.airpressure);
+
         adapter = new Adapter(data);
         recyclerView.setAdapter(adapter);
         data = new ArrayList<Model>();
         data.add(new Model
-                ("Temperature","0"));
-        data.add(new Model("Humidity","40%"));
-        data.add(new Model("Air Pressure","100kpa"));
-        data.add(new Model("Wind Speed","10 Kmh"));
+                ("" + temp,"0"));
+        data.add(new Model("" + humid,"40%"));
+        data.add(new Model("" + apressure,"100kpa"));
+        data.add(new Model("" + wspeed,"10 Kmh"));
 
         Adapter winfo = new Adapter(data,HomeActivity.this);
         recyclerView.setAdapter(winfo);
