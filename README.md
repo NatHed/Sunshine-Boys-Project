@@ -1,36 +1,9 @@
 <!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** github_username, repo_name, twitter_handle, email
+**Template from https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md
 -->
-
-
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-
-
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/NatHed/Sunshine-Boys-Project">
-    <img src="https://github.com/NatHed/Sunshine-Boys-Project/" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">SB Weather</h3>
@@ -38,13 +11,6 @@
   <p align="center">
    The app was developed by the following: Robert,Nathaniel,Gagandeep and Jeremy. This a Weather station application. Developing an app for our Hardware Project. Our project measures temperature (TMP 102), Humidity (DHT22), Barometer (Adafruit DPS310 Precision Barometric Pressure / Altitude Sensor) The final version of the app will allow users to view data from the hardware, over a set amount of time.
 
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
 
@@ -59,8 +25,6 @@ Android Studio Software
 ```sh
 git clone https://github.com/NatHed/Sunshine-Boys-Project.git
 ```
-
-
 
 
 <!-- CONTACT -->
