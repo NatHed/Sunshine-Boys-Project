@@ -1,0 +1,27 @@
+<resources>
+    <string name="aboutPage">Nous sommes les Sunshine Boys et nous créons une application pour faciliter une utilisation et une journalisation plus faciles et plus conviviales de la température et d\'autres capteurs ambiants. Il se compose d\'une application mobile qui utilise des capteurs connectés au téléphone pour enregistrer les valeurs renvoyées par les capteurs et les afficher également. L\'application prend également en charge l\'envoi de ces valeurs à un serveur distant, ce qui leur permet d\'être consultables à distance, ainsi que l\'historique consigné et visualisable à la discrétion des utilisateurs. L\'application est fournie gratuitement, car vous devez également acheter l\'addon matériel pour utiliser l\'application, qui contient les capteurs nécessaires pour utiliser correctement l\'application.</string>
+    <string name="FrgtPassword">Mot de passe oublié?</string>
+    <string name="nohaveAcc">Pas de compte? Créer une!</string>
+    <string name="btnSignIn">Se connecter</string>
+    <string name="Password">Mot de passe</string>
+    <string name="Email">Email</string>
+    <string name="Name">Nom</string>
+    <string name="btnResetPassword">réinitialiser le mot de passe</string>
+    <string name="btnRegister">S\'inscrire</string>
+    <string name="haveAcc">Vous avez déjà un compte? se connecter</string>
+    <string name="logoutMenu">Se déconnecter</string>
+    <string name="refreshMenu">Rafraîchir</string>
+    <string name="aboutUsMenu">À propos de nous</string>
+    <string name="logoScreenName">Sunshine Boys</string>
+    <string name="contactUsMenu">Nous contacter</string>
+    <string name="github">https://github.com/NatHed/Sunshine-Boys-Project.git</string>
+    <string name="pNumber">416.675.6622 ext. 5964 </string>
+    <string name="eMail">sunshineboysapp@gmail.com</string>
+    <string name="contactUs">Nous contacter</string>
+    <string name="githublink"><a href="https://github.com/NatHed/Sunshine-Boys-Project.git">https://github.com/NatHed/Sunshine-Boys-Project.git/</a></string>
+    <string name="aboutUs">À propos de nous</string>
+    <string name="homePage">Accueil</string>
+
+
+
+</resources>

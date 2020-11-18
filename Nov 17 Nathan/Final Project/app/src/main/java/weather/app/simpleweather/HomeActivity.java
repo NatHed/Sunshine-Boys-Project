@@ -65,15 +65,15 @@ public class HomeActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        Toast.makeText(HomeActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(HomeActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(HomeActivity.this, HomeActivity.class));
                         break;
                     case R.id.action_contact:
-                        Toast.makeText(HomeActivity.this, "@string/contactUs", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(HomeActivity.this, "@string/contactUs", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(HomeActivity.this, ContactUsActivity.class));
                         break;
                     case R.id.action_about:
-                        Toast.makeText(HomeActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(HomeActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(HomeActivity.this, AboutActivity.class));
                         break;
                 }

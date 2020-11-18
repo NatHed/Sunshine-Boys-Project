@@ -29,15 +29,15 @@ public class ContactUsActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        Toast.makeText(ContactUsActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(ContactUsActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(ContactUsActivity.this, HomeActivity.class));
                         break;
                     case R.id.action_contact:
-                        Toast.makeText(ContactUsActivity.this, "@string/contactUs", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(ContactUsActivity.this, "@string/contactUs", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(ContactUsActivity.this, ContactUsActivity.class));
                         break;
                     case R.id.action_about:
-                        Toast.makeText(ContactUsActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(ContactUsActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(ContactUsActivity.this, AboutActivity.class));
                         break;
                 }
