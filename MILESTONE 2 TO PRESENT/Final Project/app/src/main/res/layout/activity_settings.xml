@@ -111,6 +111,14 @@
 
             </SeekBar>
 
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/d_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Toggle Night Mode">
+
+
+            </androidx.appcompat.widget.SwitchCompat>
 
         </LinearLayout>
 
