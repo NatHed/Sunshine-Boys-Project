@@ -12,6 +12,7 @@ import android.widget.SeekBar;
 import android.widget.Toast;
 
 public class SettingsActivity extends AppCompatActivity {
+
     private static int DELAY = 4000;
 
     @Override
@@ -84,6 +85,4 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
     }
-
-
 }

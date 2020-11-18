@@ -8,19 +8,16 @@
         android:orderInCategory="1"
         app:showAsAction="always"
         android:title="@string/logoutMenu"
-        android:icon="@drawable/logoutlogo"
-        >
-
-    </item>
+        android:icon="@drawable/logoutlogo">
+        </item>
 
     <item
         android:id="@+id/refreshMenu"
         android:orderInCategory="1"
         app:showAsAction="never"
-        android:title="@string/refreshMenu"
-        >
+        android:title="@string/refreshMenu">
+        </item>
 
-    </item>
 
     <item
 
@@ -29,25 +26,23 @@
         app:showAsAction="never"
         android:title="@string/settings">
 
-        </item>
+    </item>
 
     <item
         android:id="@+id/aboutUsMenu"
-        android:orderInCategory="2"
+        android:orderInCategory="3"
         app:showAsAction="never"
-        android:title="@string/aboutUsMenu"
-        >
+        android:title="@string/aboutUsMenu">
+        </item>
 
-    </item>
+
 
     <item
         android:id="@+id/contactUsMenu"
-        android:orderInCategory="2"
+        android:orderInCategory="4"
         app:showAsAction="ifRoom"
         android:title="@string/contactUsMenu"
-        android:icon="@drawable/contactuslogo"
-        >
-
-    </item>
+        android:icon="@drawable/contactuslogo">
+        </item>
 
 </menu>
