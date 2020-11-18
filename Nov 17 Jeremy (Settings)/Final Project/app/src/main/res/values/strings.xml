@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Sb Weather</string>
+    <string name="aboutPage"> We are the Sunshine Boys, and we are making an app to facilitate easier, more user friendly use and logging of temperature and other ambient sensors. It consists of a mobile app which makes use of sensors attached to the phone to log the values returned by sensors, and display them as well. The application also supports sending these values to a remote server, which allows them to be viewable remotely, as well as the history logged and viewable at the users discretion. The app is provided free, as you also have to purchase the hardware addon to use the app, which contains the required sensors to utilize the app properly.</string>
+    <string name="FrgtPassword">Forget Password?</string>
+    <string name="nohaveAcc">No account? Create one!</string>
+    <string name="btnSignIn">Sign In</string>
+    <string name="Password">Password</string>
+    <string name="Email">Email</string>
+    <string name="Name">Name</string>
+    <string name="btnResetPassword">Reset Password</string>
+    <string name="btnRegister">Register</string>
+    <string name="haveAcc">Already have an account? Sign in</string>
+    <string name="logoutMenu">Logout</string>
+    <string name="refreshMenu">Refresh</string>
+    <string name="aboutUsMenu">About us</string>
+    <string name="logoScreenName">Sunshine Boys</string>
+    <string name="contactUsMenu">Contact us</string>
+    <string name="github">https://github.com/NatHed/Sunshine-Boys-Project.git</string>
+    <string name="pNumber">416.675.6622 ext. 5964 </string>
+    <string name="eMail">sunshineboysapp@gmail.com</string>
+    <string name="contactUs">Contact Us</string>
+    <string name="githublink"><a href="https://github.com/NatHed/Sunshine-Boys-Project.git">https://github.com/NatHed/Sunshine-Boys-Project.git/</a></string>
+    <string name="aboutUs">About Us</string>
+    <string name="homePage">Home</string>
+    <string name="settings">Settings</string>
+    <string name="brightness">Adjust Brightness</string>
+
+</resources>
