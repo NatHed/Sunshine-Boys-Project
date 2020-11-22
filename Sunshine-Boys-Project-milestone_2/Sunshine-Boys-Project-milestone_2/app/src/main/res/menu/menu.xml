@@ -8,7 +8,7 @@
         android:orderInCategory="1"
         app:showAsAction="always"
         android:title="@string/logoutMenu"
-        android:icon="@drawable/logoutlogo">
+        android:icon="@drawable/logoutimage">
         </item>
 
     <item
@@ -42,7 +42,7 @@
         android:orderInCategory="4"
         app:showAsAction="ifRoom"
         android:title="@string/contactUsMenu"
-        android:icon="@drawable/contactuslogo">
+        android:icon="@drawable/contactusimage">
         </item>
 
 </menu>
