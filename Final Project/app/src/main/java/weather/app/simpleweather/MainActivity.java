@@ -5,8 +5,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
@@ -46,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
+        SharedPreferences sp =getApplicationContext().getSharedPreferences("mypref", Context.MODE_PRIVATE);
+        String checkemail = sp.getString("email","");
+        String checkpassword = sp.getString("password","");
+        uEmail.setText(checkemail);
+        uPassword.setText(checkpassword);
+
 
         btnsgn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,8 +87,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void checkInfo(String uEmail, String uPassword){
+        String cred = getString(R.string.credentials);
+        final String login = getString(R.string.login);
+        final String failLogin = getString(R.string.faillogin);
+        // String string = getString(R.string.credentials);
 
-        progressDialog.setMessage("Please wait we are checking your credentials");
+        progressDialog.setMessage("" + cred);
         progressDialog.show();
 
         
@@ -89,12 +101,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+
                     progressDialog.dismiss();
-                    Toast.makeText(MainActivity.this,"Login Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, login, Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this,HomeActivity.class));
                 }else{
 
-                    Toast.makeText(MainActivity.this,"Login Failed, try again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,failLogin, Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
 
                     }
@@ -111,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
         userLogin = (TextView) findViewById(R.id.nohaveAcc);
         btnsgn = (Button) findViewById(R.id.btnSignIn);
         btnforgetPassword = (TextView) findViewById(R.id.FrgtPassword);
+
+
     }
 
 
@@ -118,13 +133,15 @@ public class MainActivity extends AppCompatActivity {
 
         boolean result = false;
 
+        String details = getString(R.string.details);
+
 
         String checkpassword = uEmail.getText().toString();
         String checkemail = uPassword.getText().toString();
 
         if(checkemail.isEmpty() || checkpassword.isEmpty()) {
 
-            Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, details, Toast.LENGTH_SHORT).show();
         }
         else {
             result = true;
@@ -137,20 +154,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
+        String exit= getString(R.string.exit);
+        String yes= getString(R.string.yes);
+        String no=getString(R.string.no);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setMessage("Are you sure you want to exit this App?")
+        builder.setMessage("" + exit)
                 .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setPositiveButton(yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                        MainActivity.super.onBackPressed();
+                        moveTaskToBack(true);
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                        System.exit(1);
 
                     }
                 })
 
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setNegativeButton(no, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 

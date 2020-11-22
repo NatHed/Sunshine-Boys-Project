@@ -52,6 +52,9 @@
 
     <string name="ckupd">You\'re up to date</string>
     <string name="SettingBar">Settings</string>
+    <string name="setorg">Organization \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 Sunshine Boys</string>
+    <string name="setver">Version \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 1.0.1</string>
+    <string name="setupd">Check for Update!</string>
 
 
 </resources>

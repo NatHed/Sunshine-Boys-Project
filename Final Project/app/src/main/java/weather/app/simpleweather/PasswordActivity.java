@@ -3,11 +3,17 @@ package weather.app.simpleweather;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,6 +24,7 @@ public class PasswordActivity extends AppCompatActivity {
 
     private EditText EmailResetPassword;
     private Button btnreset;
+    private static int DELAY = 4000;
 
     private FirebaseAuth firebaseAuth;
 
@@ -26,6 +33,40 @@ public class PasswordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_password);
+
+
+        SeekBar seekBar = findViewById(R.id.seekbar);
+
+
+        seekBar.setMax(255);
+
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+
+
+
+                android.provider.Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, progress);
+
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        askPermission(this);
+
+
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -37,10 +78,13 @@ public class PasswordActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String useremail = EmailResetPassword.getText().toString().trim();
+                String email = getString(R.string.email);
+                final String passreset = getString(R.string.passreset);
+                final String linkerror = getString(R.string.linkerror);
 
                 if(useremail.equals("")){
 
-                    Toast.makeText(PasswordActivity.this,"Please enter your email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PasswordActivity.this,email, Toast.LENGTH_SHORT).show();
 
                 }else{
 
@@ -50,12 +94,12 @@ public class PasswordActivity extends AppCompatActivity {
 
                            if(task.isSuccessful()){
 
-                               Toast.makeText(PasswordActivity.this, "Password reset link has been sent!!", Toast.LENGTH_SHORT).show();
+                               Toast.makeText(PasswordActivity.this, passreset, Toast.LENGTH_SHORT).show();
                                finish();
                                startActivity(new Intent(PasswordActivity.this, MainActivity.class));
                            }else {
 
-                               Toast.makeText(PasswordActivity.this, "Error sending the reset link", Toast.LENGTH_SHORT).show();
+                               Toast.makeText(PasswordActivity.this, linkerror, Toast.LENGTH_SHORT).show();
 
                            }
                        }
@@ -65,4 +109,39 @@ public class PasswordActivity extends AppCompatActivity {
         });
 
     }
+
+
+    public void askPermission(final Context c){
+
+        final String permission = getString(R.string.permission);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+
+            if(Settings.System.canWrite(c)){
+
+                //you have permission
+
+            }
+            else {
+
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        Intent i = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                        c.startActivity(i);
+                    }
+                }, DELAY);
+
+
+                Toast.makeText(PasswordActivity.this, permission, Toast.LENGTH_LONG).show();
+
+            }
+
+
+
+
+        }
+
+    }
+
 }

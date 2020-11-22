@@ -3,7 +3,9 @@ package weather.app.simpleweather;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -35,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText userUName, userPassword, userEmail;
     private Button btnreg;
     private TextView userLogin;
-
+    private SharedPreferences sp;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -64,20 +66,29 @@ public class RegisterActivity extends AppCompatActivity {
 
                    //trim, removes spaces
                    String user_name = userUName.getText().toString().trim();
-                   String user_password = userPassword.getText().toString().trim();
-                   String user_email = userEmail.getText().toString().trim();
+                   final String user_password = userPassword.getText().toString().trim();
+                   final String user_email = userEmail.getText().toString().trim();
+                   final String registersuccess = getString(R.string.registersuccess);
+                   final String registerunsuccess = getString(R.string.registerunsuccess);
 
 
                    firebaseAuth.createUserWithEmailAndPassword(user_email, user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                        @Override
                        public void onComplete(@NonNull Task<AuthResult> task) {
                            if(task.isSuccessful()) {
-                               Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+
+                               sp = getSharedPreferences("mypref", Context.MODE_PRIVATE);
+                               SharedPreferences.Editor edit = sp.edit();
+                               edit.putString("email",user_email);
+                               edit.putString("password",user_password);
+                               edit.apply();
+
+                               Toast.makeText(RegisterActivity.this, registersuccess, Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(RegisterActivity.this, MainActivity.class));
 
                            }else{
 
-                               Toast.makeText(RegisterActivity.this, "Registration Unsuccessful, Please Try Again", Toast.LENGTH_SHORT).show();
+                               Toast.makeText(RegisterActivity.this, registerunsuccess, Toast.LENGTH_SHORT).show();
                            }
                        }
                    });
@@ -108,27 +119,31 @@ public class RegisterActivity extends AppCompatActivity {
         String checkname = userUName.getText().toString();
         String checkpassword = userPassword.getText().toString();
         String checkemail = userEmail.getText().toString();
+        String details = getString(R.string.details);
+        String name = getString(R.string.name);
+        String eMail = getString(R.string.vemail);
+        String password = getString(R.string.password);
 
         if(checkname.isEmpty() || checkpassword.isEmpty() || checkemail.isEmpty()) {
-            Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, details, Toast.LENGTH_SHORT).show();
 
         }
 
         else if(!PASSWORD_PATTERN.matcher(checkpassword).matches()){
-            Toast.makeText(this, "please verify your Password ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,password, Toast.LENGTH_SHORT).show();
 
         }
 
 
        else if(!Patterns.EMAIL_ADDRESS.matcher(checkemail).matches()) {
-            Toast.makeText(this, "please verify your Email Address ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, eMail, Toast.LENGTH_SHORT).show();
 
         }
 
 
        else if(!userUName.getText().toString().matches("[a-z,A-Z]*"))
        {
-            Toast.makeText(this, "Please enter a correct Name", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
 
         }
 

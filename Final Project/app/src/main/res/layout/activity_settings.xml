@@ -20,7 +20,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Organization                     Sunshine Boys"
+                android:text="@string/setorg"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:textSize="20sp"
@@ -43,7 +43,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Version                                                 2.2.5"
+                android:text="@string/setver"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:textSize="20sp"
@@ -56,7 +56,7 @@
             <Button
 
                 android:id="@+id/checkupdatebtn"
-                android:text="Check for Update!"
+                android:text="@string/setupd"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="25dp"
@@ -71,9 +71,9 @@
                 android:layout_height="3dp"
                 android:background="@color/colorPrimary"
                 android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
+                android:layout_marginRight="25dp">
 
-                ></View>
+            </View>
 
 
 
@@ -95,10 +95,12 @@
                 android:layout_marginTop="10dp"
                 android:id="@+id/seekbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:layout_height="25dp"
+
+
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -109,6 +111,14 @@
 
             </SeekBar>
 
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/d_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Toggle Night Mode">
+
+
+            </androidx.appcompat.widget.SwitchCompat>
 
         </LinearLayout>
 
