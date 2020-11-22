@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Home_Page</string>
-    <string name ="temp">Temperature</string>
-    <string name ="humid">Humidity</string>
-    <string name ="airp">Air Pressure</string>
-    <string name="ftemp">20°C</string>
-</resources>
