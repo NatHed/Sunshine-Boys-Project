@@ -60,8 +60,11 @@ public class SettingsActivity extends AppCompatActivity {
 
 
         seekBar.setMax(255);
-
-
+        Context current = getApplicationContext();
+        boolean settingsCanWrite = Settings.System.canWrite(current);
+        if (!settingsCanWrite) { // won't be able to change brightness if we can't write system settings
+            requestPermissions(new String[]{Manifest.permission.WRITE_SETTINGS}, 101); // ...so ask for permission to do that
+        }
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
