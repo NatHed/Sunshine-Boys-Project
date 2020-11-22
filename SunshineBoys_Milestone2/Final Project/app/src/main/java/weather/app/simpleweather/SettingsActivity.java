@@ -90,6 +90,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         darksw = findViewById(R.id.d_switch);
         sp_nm = getSharedPreferences("prefnightmode",Context.MODE_PRIVATE);
+        darksw.setChecked(sp_nm.getBoolean("nmode",true));
 
 
 
@@ -100,7 +101,7 @@ public class SettingsActivity extends AppCompatActivity {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     darksw.setChecked(true);
                     SharedPreferences.Editor edit = sp_nm.edit();
-                    edit.putBoolean("nightmode",b);
+                    edit.putBoolean("nmode",b);
                     edit.apply();
 
 
@@ -110,7 +111,7 @@ public class SettingsActivity extends AppCompatActivity {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     darksw.setChecked(false);
                     SharedPreferences.Editor edit = sp_nm.edit();
-                    edit.putBoolean("nightmode",b);
+                    edit.putBoolean("nmode",b);
                     edit.apply();
 
 
