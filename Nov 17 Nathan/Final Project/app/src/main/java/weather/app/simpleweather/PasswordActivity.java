@@ -3,8 +3,10 @@ package weather.app.simpleweather;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -37,19 +39,18 @@ public class PasswordActivity extends AppCompatActivity {
 
         SeekBar seekBar = findViewById(R.id.seekbar);
 
-
+        Context current = getApplicationContext();
         seekBar.setMax(255);
-
+        boolean settingsCanWrite = Settings.System.canWrite(current);
+        if (!settingsCanWrite) { // won't be able to change brightness if we can't write system settings
+            requestPermissions(new String[]{Manifest.permission.WRITE_SETTINGS}, 101); // ...so ask for permission to do that
+        }
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
-
-
-
                 android.provider.Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, progress);
-
 
             }
 
@@ -109,6 +110,7 @@ public class PasswordActivity extends AppCompatActivity {
         });
 
     }
+
 
 
     public void askPermission(final Context c){
