@@ -36,7 +36,7 @@
             android:theme="@style/AppThemeRemove" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".ContactUsActivity" />
-        <activity android:name=".fragment.BottomNavigation" />
+        <activity android:name=".Fragments.BottomNavigation" />
     </application>
 
 </manifest>

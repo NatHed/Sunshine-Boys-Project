@@ -21,7 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import weather.app.simpleweather.fragment.BottomNavigation;
+import weather.app.simpleweather.Fragments.BottomNavigation;
 
 
 public class MainActivity extends AppCompatActivity {
