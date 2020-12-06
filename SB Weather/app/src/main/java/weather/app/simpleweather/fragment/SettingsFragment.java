@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -16,6 +19,7 @@ import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
@@ -35,10 +39,47 @@ public class SettingsFragment extends Fragment {
 
     @Nullable
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        getActivity().getMenuInflater().inflate(R.menu.menu,menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        Fragment selectedFragment = null;
+        switch(item.getItemId()){
+
+            case R.id.logoutMenu: {
+
+                getActivity().finish();
+                startActivity(new Intent(getActivity(), MainActivity.class));
+                break;
+            }
+
+
+            case R.id.refreshMenu:{
+                selectedFragment = new HomeFragment();
+                break;
+            }
+
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Nullable
+    @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //checkupdate();
+
 
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
+        checkupdate(view);
         SeekBar seekBar = view.findViewById(R.id.seekbar);
         seekBar.setMax(255);
 
@@ -144,8 +185,8 @@ public class SettingsFragment extends Fragment {
     }
 
 
-/*
-    public void checkupdate(){
+
+    public void checkupdate(View view){
 
         final Button chkbtn = view.findViewById(R.id.checkupdatebtn);
         final String ckup = getString(R.string.ckupd);
@@ -162,7 +203,7 @@ public class SettingsFragment extends Fragment {
         });
     }
 
-*/
+
 
 }
 

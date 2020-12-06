@@ -166,15 +166,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void checkupdate(){
 
-
         final Button chkbtn = findViewById(R.id.checkupdatebtn);
         final String ckup = getString(R.string.ckupd);
-
-
-
-
-
-        
         chkbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

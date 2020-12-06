@@ -20,6 +20,9 @@ public class BottomNavigation extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navi);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+        if (savedInstanceState == null) {
+            bottomNavigationView.setSelectedItemId(R.id.action_home); // change to whichever id should be default
+        }
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
