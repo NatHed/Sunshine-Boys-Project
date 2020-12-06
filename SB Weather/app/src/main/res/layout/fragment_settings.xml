@@ -150,6 +150,7 @@
                 android:id="@+id/logoutbutton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="Logout"
                 android:text="Logout" />
 
         </LinearLayout>
