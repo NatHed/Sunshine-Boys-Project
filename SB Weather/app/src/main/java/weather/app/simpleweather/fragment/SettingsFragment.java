@@ -39,7 +39,6 @@ public class SettingsFragment extends Fragment {
         //checkupdate();
 
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
-        Button btn = (Button) view.findViewById(R.id.logoutbutton);
         SeekBar seekBar = view.findViewById(R.id.seekbar);
         seekBar.setMax(255);
 
@@ -65,15 +64,6 @@ public class SettingsFragment extends Fragment {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().finish();
-                startActivity(new Intent(getActivity(), MainActivity.class));
 
             }
         });

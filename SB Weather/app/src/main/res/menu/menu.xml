@@ -14,35 +14,8 @@
     <item
         android:id="@+id/refreshMenu"
         android:orderInCategory="1"
-        app:showAsAction="never"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/refresh_image_white"
         android:title="@string/refreshMenu">
         </item>
-
-
-    <item
-
-        android:id="@+id/settings"
-        android:orderInCategory="2"
-        app:showAsAction="never"
-        android:title="@string/settings">
-
-    </item>
-
-    <item
-        android:id="@+id/aboutUsMenu"
-        android:orderInCategory="3"
-        app:showAsAction="never"
-        android:title="@string/aboutUsMenu">
-        </item>
-
-
-
-    <item
-        android:id="@+id/contactUsMenu"
-        android:orderInCategory="4"
-        app:showAsAction="ifRoom"
-        android:title="@string/contactUsMenu"
-        android:icon="@drawable/white_contactus">
-        </item>
-
 </menu>

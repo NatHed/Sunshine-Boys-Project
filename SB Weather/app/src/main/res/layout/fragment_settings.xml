@@ -137,21 +137,7 @@
 
             </androidx.appcompat.widget.SwitchCompat>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:background="@color/colorPrimary">
 
-            </View>
-
-            <Button
-                android:id="@+id/logoutbutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Logout"
-                android:text="Logout" />
 
         </LinearLayout>
 
