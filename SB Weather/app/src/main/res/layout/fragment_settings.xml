@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_greenery"
     tools:context=".SettingsActivity">
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,92 +20,89 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/setorg"
                 android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginRight="25dp"
-                android:textSize="20sp"
-                android:textColor="#000000"
-                android:singleLine="true"
                 android:layout_marginBottom="10dp"
+                android:singleLine="true"
+                android:text="@string/setorg"
+                android:textColor="#000000"
+                android:textSize="20sp"
 
-                >
-            </TextView>
+                ></TextView>
 
-            <View android:layout_width="match_parent"
+            <View
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/colorPrimary"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
+                android:background="@color/colorPrimary"
 
                 >
 
             </View>
 
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/setver"
                 android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="25dp"
-                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/setver"
                 android:textColor="#000000"
 
-                android:layout_marginBottom="10dp">
-            </TextView>
+                android:textSize="20sp"></TextView>
 
 
             <Button
 
                 android:id="@+id/checkupdatebtn"
-                android:text="@string/setupd"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:layout_marginLeft="25dp"
-                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/setupd"
                 android:textColor="#000000"
-                android:layout_marginBottom="10dp">
-            </Button>
+                android:textSize="20sp"></Button>
 
 
-            <View android:layout_width="match_parent"
+            <View
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/colorPrimary"
                 android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp">
+                android:layout_marginRight="25dp"
+                android:background="@color/colorPrimary">
 
             </View>
 
 
-
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/brightness"
-                android:textSize="20sp"
                 android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="25dp"
-                android:textStyle="bold"
+                android:text="@string/brightness"
+                android:textColor="@color/bright_menu"
+                android:textSize="20sp"
 
-                android:textColor="@color/bright_menu">
-            </TextView>
+                android:textStyle="bold"></TextView>
 
 
             <SeekBar
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:id="@+id/seekbar"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-
-
                 android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+
+
                 android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -114,50 +114,48 @@
 
             </SeekBar>
 
-            <View android:layout_width="match_parent"
+            <View
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/colorPrimary"
                 android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp">
+                android:layout_marginRight="25dp"
+                android:background="@color/colorPrimary">
 
             </View>
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/d_switch"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
                 android:text="@string/toggle"
-                android:textSize="20sp"
-                android:textColor="#000000">
+                android:textColor="#000000"
+                android:textSize="20sp">
 
 
             </androidx.appcompat.widget.SwitchCompat>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@color/colorPrimary">
+
+            </View>
+
+            <Button
+                android:id="@+id/logoutbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout" />
+
         </LinearLayout>
 
+
     </ScrollView>
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/container"
-        >
-        <!-- Main content -->
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="#352E5A"
-            app:itemIconTint="@color/white"
-            app:itemTextColor="@color/white"
-            app:menu="@menu/bottom_nav_menu"
-            />
-    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

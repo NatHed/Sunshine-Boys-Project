@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.ArrayList;
 
 import weather.app.simpleweather.Adapter;
+import weather.app.simpleweather.HomeActivity;
 import weather.app.simpleweather.Model;
 import weather.app.simpleweather.R;
 
@@ -55,6 +56,31 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        recyclerView =(RecyclerView) view.findViewById(R.id.recycleview);
+        recyclerView.setHasFixedSize(true);
+
+        layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        String temp = getString(R.string.temperature);
+        String humid = getString(R.string.humidity);
+        String apressure = getString(R.string.windspeed);
+        String wspeed = getString(R.string.airpressure);
+
+        adapter = new Adapter(data);
+        recyclerView.setAdapter(adapter);
+        data = new ArrayList<Model>();
+        data.add(new Model
+                ("" + temp,"0"));
+        data.add(new Model("" + humid,"40%"));
+        data.add(new Model("" + apressure,"100kpa"));
+        data.add(new Model("" + wspeed,"10 Kmh"));
+
+        Adapter winfo = new Adapter(data, getActivity());
+        recyclerView.setAdapter(winfo);
+
+/*
         adapter = new Adapter(data,getActivity());
         //GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), );
         recyclerView =(RecyclerView) view.findViewById(R.id.recycleview);
@@ -62,7 +88,7 @@ public class HomeFragment extends Fragment {
 
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setItemAnimator(new DefaultItemAnimator());*/
         return view;
     }
 }

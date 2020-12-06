@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Sb Weather</string>
     <string name="SettingBar">Settings</string>
-    <string name="aboutPage"> We are the Sunshine Boys, and we are making an app to facilitate easier, more user friendly use and logging of temperature and other ambient sensors. It consists of a mobile app which makes use of sensors attached to the phone to log the values returned by sensors, and display them as well. The application also supports sending these values to a remote server, which allows them to be viewable remotely, as well as the history logged and viewable at the users discretion. The app is provided free, as you also have to purchase the hardware addon to use the app, which contains the required sensors to utilize the app properly.</string>
+    <string name="aboutPage"> We are the Sunshine Boys, and we are making an app to facilitate an easier, user friendly use and logging of temperature and other ambient sensors. It consists of a mobile app that makes use of sensors connected to the phone to log and display the values returned by sensors. The application also supports sending these values to a remote server, as well as the history of readings, logged and viewable at the users discretion. This app is free, as you also have to purchase the hardware addon to use the app, which contains the required sensors to utilize the app properly.</string>
     <string name="FrgtPassword">Forget Password?</string>
     <string name="nohaveAcc">No account? Create one!</string>
     <string name="btnSignIn">Sign In</string>

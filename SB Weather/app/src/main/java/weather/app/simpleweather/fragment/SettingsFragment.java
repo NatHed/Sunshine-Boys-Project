@@ -138,6 +138,8 @@ public class SettingsFragment extends Fragment {
         }
 
     }
+
+
 /*
     public void checkupdate(){
 
