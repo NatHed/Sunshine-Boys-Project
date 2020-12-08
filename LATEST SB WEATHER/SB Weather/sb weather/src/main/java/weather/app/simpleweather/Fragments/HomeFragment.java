@@ -9,7 +9,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -44,12 +46,62 @@ public class HomeFragment extends Fragment {
     private static ArrayList<Model> data;
     static View.OnClickListener myOnClickListener;
 
-
     public String URL = "http://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=23f04464b7119837cf1dc4fa8b39caa3&units=metric";
 
 
+    @Nullable
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
 
-    //EDIT THIS VIEW
+        String temp = getString(R.string.temperature);
+        String humid = getString(R.string.humidity);
+        String apressure = getString(R.string.windspeed);
+        String wspeed = getString(R.string.airpressure);
+
+        super.onCreate(savedInstanceState);
+        data = new ArrayList<Model>();
+        data.add(new Model
+                ("" + temp,"0"));
+        data.add(new Model("" + humid,"40%"));
+        data.add(new Model("" + apressure,"100kpa"));
+        data.add(new Model("" + wspeed,"10 Kmh"));
+
+
+        setHasOptionsMenu(true);
+
+
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        getActivity().getMenuInflater().inflate(R.menu.menu,menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        Fragment selectedFragment = null;
+        switch(item.getItemId()){
+
+            case R.id.logoutMenu: {
+
+                getActivity().finish();
+                startActivity(new Intent(getActivity(), MainActivity.class));
+                break;
+            }
+
+
+            case R.id.refreshMenu:{
+                selectedFragment = new HomeFragment();
+                break;
+            }
+
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -63,12 +115,22 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        String temp = getString(R.string.temperature);
+        /*String temp = getString(R.string.temperature);
         String humid = getString(R.string.humidity);
-        String apressure = getString(R.string.airpressure);
-        String wspeed = getString(R.string.windspeed);
+        String apressure = getString(R.string.windspeed);
+        String wspeed = getString(R.string.airpressure);
 
+        adapter = new Adapter(data);
+        recyclerView.setAdapter(adapter);
+        data = new ArrayList<Model>();
+        data.add(new Model
+                ("" + temp,"0"));
+        data.add(new Model("" + humid,"40%"));
+        data.add(new Model("" + apressure,"100kpa"));
+        data.add(new Model("" + wspeed,"10 Kmh"));
 
+        Adapter winfo = new Adapter(data, getActivity());
+        recyclerView.setAdapter(winfo);*/
         new ReadJSONFeedTask().execute(URL);
 
         return view;
@@ -110,6 +172,7 @@ public class HomeFragment extends Fragment {
         protected String doInBackground(String... urls) {
             return readJSONFeed(urls[0]);
         }
+
         protected void onPostExecute(String result) {
             try {
                 //JSONArray jsonArray = new JSONArray(result);
@@ -118,8 +181,8 @@ public class HomeFragment extends Fragment {
 
                 //
 
-                JSONObject dataObject= weatherJson.getJSONObject("main");
-                JSONObject windsp_Object= weatherJson.getJSONObject("wind");
+                JSONObject dataObject = weatherJson.getJSONObject("main");
+                JSONObject windsp_Object = weatherJson.getJSONObject("wind");
 
 
                /* temperature.setText(dataObject.getString("temp"));
@@ -142,50 +205,19 @@ public class HomeFragment extends Fragment {
                 recyclerView.setAdapter(adapter);
                 data = new ArrayList<Model>();
                 data.add(new Model
-                        (temp,temperature+ " °C"));
-                data.add(new Model(humid,humidity+ " %"));
-                data.add(new Model(apressure, pressure+ " pa"));
-                data.add(new Model(wspeed, wind_speed+ " km/h"));
+                        (temp, temperature + " °C"));
+                data.add(new Model(humid, humidity + " %"));
+                data.add(new Model(apressure, pressure + " pa"));
+                data.add(new Model(wspeed, wind_speed + " km/h"));
 
                 Adapter winfo = new Adapter(data, getActivity());
                 recyclerView.setAdapter(winfo);
-
 
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+
     }
-
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        getActivity().getMenuInflater().inflate(R.menu.menu,menu);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){
-        Fragment selectedFragment = null;
-        switch(item.getItemId()){
-
-            case R.id.logoutMenu: {
-
-                getActivity().finish();
-                startActivity(new Intent(getActivity(), MainActivity.class));
-                break;
-            }
-
-
-            case R.id.refreshMenu:{
-                selectedFragment = new HomeFragment();
-                break;
-            }
-
-
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
 }
