@@ -26,10 +26,6 @@ public class AboutActivity extends AppCompatActivity {
                         //Toast.makeText(AboutActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(AboutActivity.this, HomeActivity.class));
                         break;
-                    case R.id.action_contact:
-                        //Toast.makeText(AboutActivity.this, "@string/contactUs", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AboutActivity.this, ContactUsActivity.class));
-                        break;
                     case R.id.action_about:
                         //Toast.makeText(AboutActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(AboutActivity.this, AboutActivity.class));

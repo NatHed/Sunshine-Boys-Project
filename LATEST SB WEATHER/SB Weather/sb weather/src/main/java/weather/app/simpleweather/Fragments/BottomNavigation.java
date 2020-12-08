@@ -36,9 +36,6 @@ public class BottomNavigation extends AppCompatActivity {
                         case R.id.action_about:
                           selectedFragment = new AboutFragment();
                             break;
-                        case R.id.action_contact:
-                            selectedFragment = new ContactFragment();
-                            break;
                         case R.id.action_settings:
                             selectedFragment = new SettingsFragment();
                             break;

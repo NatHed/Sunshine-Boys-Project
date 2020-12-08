@@ -6,10 +6,6 @@
         android:icon="@drawable/home_page"
         android:title="@string/homePage" />
     <item
-        android:id="@+id/action_contact"
-        android:icon="@drawable/contactuslogo1"
-        android:title="@string/contactUs" />
-    <item
         android:id="@+id/action_about"
         android:icon="@drawable/about_us"
         android:title="@string/aboutUs" />

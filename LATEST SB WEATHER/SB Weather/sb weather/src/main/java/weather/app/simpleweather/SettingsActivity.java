@@ -43,10 +43,7 @@ public class SettingsActivity extends AppCompatActivity {
                         //Toast.makeText(ContactUsActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
                         break;
-                    case R.id.action_contact:
-                        //Toast.makeText(ContactUsActivity.this, "@string/contactUs", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(SettingsActivity.this, ContactUsActivity.class));
-                        break;
+
                     case R.id.action_about:
                         //Toast.makeText(ContactUsActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(SettingsActivity.this, AboutActivity.class));
