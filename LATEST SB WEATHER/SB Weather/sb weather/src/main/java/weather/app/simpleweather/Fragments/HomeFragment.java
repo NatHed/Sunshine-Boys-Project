@@ -47,34 +47,7 @@ public class HomeFragment extends Fragment {
 
     public String URL = "http://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=23f04464b7119837cf1dc4fa8b39caa3&units=metric";
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        getActivity().getMenuInflater().inflate(R.menu.menu,menu);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
 
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){
-        Fragment selectedFragment = null;
-        switch(item.getItemId()){
-
-            case R.id.logoutMenu: {
-
-                getActivity().finish();
-                startActivity(new Intent(getActivity(), MainActivity.class));
-                break;
-            }
-
-
-            case R.id.refreshMenu:{
-                selectedFragment = new HomeFragment();
-                break;
-            }
-
-
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     //EDIT THIS VIEW
     @Override
@@ -169,10 +142,10 @@ public class HomeFragment extends Fragment {
                 recyclerView.setAdapter(adapter);
                 data = new ArrayList<Model>();
                 data.add(new Model
-                        (temp,temperature));
-                data.add(new Model(humid,humidity));
-                data.add(new Model(apressure, pressure));
-                data.add(new Model(wspeed, wind_speed));
+                        (temp,temperature+ " °C"));
+                data.add(new Model(humid,humidity+ " %"));
+                data.add(new Model(apressure, pressure+ " pa"));
+                data.add(new Model(wspeed, wind_speed+ " km/h"));
 
                 Adapter winfo = new Adapter(data, getActivity());
                 recyclerView.setAdapter(winfo);
@@ -183,6 +156,36 @@ public class HomeFragment extends Fragment {
                 e.printStackTrace();
             }
         }
+    }
+
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        getActivity().getMenuInflater().inflate(R.menu.menu,menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        Fragment selectedFragment = null;
+        switch(item.getItemId()){
+
+            case R.id.logoutMenu: {
+
+                getActivity().finish();
+                startActivity(new Intent(getActivity(), MainActivity.class));
+                break;
+            }
+
+
+            case R.id.refreshMenu:{
+                selectedFragment = new HomeFragment();
+                break;
+            }
+
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }
