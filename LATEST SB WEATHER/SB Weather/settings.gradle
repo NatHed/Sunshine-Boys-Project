@@ -1,2 +1,2 @@
-include ':sb weather'
+include ':app'
 rootProject.name = "SimpleWeather"
