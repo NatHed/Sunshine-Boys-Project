@@ -14,7 +14,7 @@
     <string name="logoutMenu">Logout</string>
     <string name="refreshMenu">Refresh</string>
     <string name="aboutUsMenu">About us</string>
-    <string name="logoScreenName">Sunshine Boys</string>
+    <string name="logoScreenName">SB Weather</string>
     <string name="contactUsMenu">Contact us</string>
     <string name="github">https://github.com/NatHed/Sunshine-Boys-Project.git</string>
     <string name="pNumber">416.675.6622 ext. 5964 </string>
@@ -46,7 +46,7 @@
     <string name="settings">Settings</string>
     <string name="brightness">Adjust Brightness</string>
 
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
 =======
     <string name="questions" > For questions, email:</string>
     <string name="send_mail"> Send mail</string>
@@ -60,7 +60,7 @@
     <string name="conpassmsg">Password not matching</string>
     <string name="passwordrestriction"><![CDATA[Password must be 7 characters, should contain 1 upper case and a special character (@#$%^&+=)]]></string>
     <string name="confirmPassword">Confirm Password</string>
-    <string name="refresh">"Refreshed Page"</string>
+    <string name="refresh">"Page Refreshed"</string>
 
 
 </resources>
