@@ -12,7 +12,7 @@
         android:id="@+id/aboutUslogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="monospace"
         android:text="@string/aboutUs"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -20,15 +20,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/aboutUs"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
         android:id="@+id/aboutUs"
-        android:layout_width="340dp"
-        android:layout_height="432dp"
+        android:layout_width="348dp"
+        android:layout_height="403dp"
         android:fontFamily="monospace"
         android:text="@string/aboutPage"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -38,5 +38,48 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541" />
+        app:layout_constraintVertical_bias="0.234" />
+
+    <ImageView
+        android:id="@+id/EmailImage"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/app_name"
+        android:src="@android:drawable/ic_dialog_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forquestions"
+        app:tint="#000000" />
+
+    <TextView
+        android:id="@+id/forquestions"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:fontFamily="monospace"
+        android:text="@string/questions"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/EmailImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutUs" />
+
+    <TextView
+        android:id="@+id/EmailAddress"
+        android:layout_width="275dp"
+        android:layout_height="30dp"
+        android:fontFamily="monospace"
+        android:text="@string/eMail"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailImage"
+        app:layout_constraintVertical_bias="0.028" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

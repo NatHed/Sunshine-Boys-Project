@@ -41,7 +41,7 @@
         android:layout_width="208dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/register_background"
+        android:background="@color/colorPrimary"
         android:text="@string/btnSignIn"
         android:textColor="#ffffff"
         android:textSize="20sp"

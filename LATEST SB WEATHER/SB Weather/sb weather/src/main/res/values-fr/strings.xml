@@ -46,9 +46,8 @@
     <string name="brightness">Ajuster la luminosité</string>
 
 
-
-
-
+    <string name="questions">Pour toute question, envoyez un courriel:</string>
+    <string name="send_mail">Envoyer un mail</string>
 
     <string name="ckupd">You\'re up to date</string>
     <string name="SettingBar">Settings</string>
