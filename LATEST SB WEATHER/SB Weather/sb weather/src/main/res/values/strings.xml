@@ -47,15 +47,15 @@
     <string name="brightness">Adjust Brightness</string>
 
 
-
     <string name="ckupd">You\'re up to date</string>
     <string name="setorg">Organization \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 Sunshine Boys</string>
     <string name="setver">Version \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 1.0.1</string>
     <string name="setupd">Check for Update!</string>
-    <string name ="toggle">Toggle Night Mode \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020</string>
+    <string name="toggle">Toggle Night Mode \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020</string>
     <string name="conpassmsg">Password not matching</string>
     <string name="passwordrestriction"><![CDATA[Password must be 7 characters, should contain 1 upper case and a special character (@#$%^&+=)]]></string>
     <string name="confirmPassword">Confirm Password</string>
+    <string name="refresh">"Refreshed Page"</string>
 
 
 </resources>

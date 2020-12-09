@@ -25,6 +25,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 
 import weather.app.simpleweather.MainActivity;
@@ -64,6 +65,7 @@ public class SettingsFragment extends Fragment {
 
             case R.id.refreshMenu:{
                 selectedFragment = new HomeFragment();
+                showsnackbar();
                 break;
             }
 
@@ -71,6 +73,13 @@ public class SettingsFragment extends Fragment {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showsnackbar()
+    {
+        String refresh = getString(R.string.refresh);
+        Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),refresh,Snackbar.LENGTH_SHORT);
+        snackbar.show();
     }
 
     @Nullable

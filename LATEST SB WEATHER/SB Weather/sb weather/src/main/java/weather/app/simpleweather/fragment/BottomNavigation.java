@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
 import weather.app.simpleweather.R;
 
 public class BottomNavigation extends AppCompatActivity {
@@ -49,6 +50,8 @@ public class BottomNavigation extends AppCompatActivity {
                     return true;
                 }
             };
+
+
 }
         /* bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

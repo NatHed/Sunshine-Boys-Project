@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONObject;
@@ -32,6 +33,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import weather.app.simpleweather.Adapter;
+import weather.app.simpleweather.HomeActivity;
 import weather.app.simpleweather.MainActivity;
 import weather.app.simpleweather.Model;
 import weather.app.simpleweather.R;
@@ -92,6 +94,7 @@ public class HomeFragment extends Fragment {
 
             case R.id.refreshMenu:{
                 selectedFragment = new HomeFragment();
+                showsnackbar();
                 break;
             }
 
@@ -100,6 +103,14 @@ public class HomeFragment extends Fragment {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void showsnackbar()
+    {
+        String refresh = getString(R.string.refresh);
+        Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),refresh,Snackbar.LENGTH_SHORT);
+        snackbar.show();
+    }
+
 
 
     @Override

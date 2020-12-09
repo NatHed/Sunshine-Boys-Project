@@ -18,4 +18,6 @@
         android:icon="@drawable/refresh_image_white"
         android:title="@string/refreshMenu">
         </item>
+
+
 </menu>

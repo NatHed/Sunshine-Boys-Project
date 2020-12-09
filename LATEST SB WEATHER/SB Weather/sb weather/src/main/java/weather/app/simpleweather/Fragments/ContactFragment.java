@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import weather.app.simpleweather.MainActivity;
 import weather.app.simpleweather.R;
 
@@ -45,6 +47,7 @@ public class ContactFragment extends Fragment {
 
             case R.id.refreshMenu:{
                 selectedFragment = new HomeFragment();
+                showsnackbar();
                 break;
             }
 
@@ -52,6 +55,13 @@ public class ContactFragment extends Fragment {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showsnackbar()
+    {
+        String refresh = getString(R.string.refresh);
+        Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),refresh,Snackbar.LENGTH_SHORT);
+        snackbar.show();
     }
 
     @Nullable
