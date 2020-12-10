@@ -123,7 +123,7 @@ public class SettingsFragment extends Fragment {
 
         darksw = view.findViewById(R.id.d_switch);
         sp_nm = getActivity().getSharedPreferences("prefnightmode",Context.MODE_PRIVATE);
-        darksw.setChecked(sp_nm.getBoolean("nmode",true));
+        darksw.setChecked(sp_nm.getBoolean("nmode",false));
 
 
 

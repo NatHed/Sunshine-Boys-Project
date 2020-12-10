@@ -16,7 +16,7 @@
     <string name="logoScreenName">Sunshine Boys</string>
     <string name="contactUsMenu">Nous contacter</string>
     <string name="github">https://github.com/NatHed/Sunshine-Boys-Project.git</string>
-    <string name="pNumber">416.675.6622</string>
+    <string name="pNumber">416.675.6622 ext. 5964 </string>
     <string name="eMail">sunshineboysapp@gmail.com</string>
     <string name="contactUs">Nous contacter</string>
 
@@ -49,14 +49,14 @@
     <string name="questions">Pour toute question, envoyez un courriel:</string>
     <string name="send_mail">Envoyer un mail</string>
 
-    <string name="ckupd">Vous êtes à jour</string>
-    <string name="SettingBar">Réglages</string>
-    <string name="setorg">Organisation \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 Sunshine Boys</string>
+    <string name="ckupd">You\'re up to date</string>
+    <string name="SettingBar">Settings</string>
+    <string name="setorg">Organization \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 Sunshine Boys</string>
     <string name="setver">Version \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 1.0.1</string>
-    <string name="setupd">Vérifiez la mise à jour!</string>
-    <string name ="toggle">Basculer en mode nuit</string>
-    <string name="conpassmsg">Le mot de passe ne correspond pas</string>
-    <string name="passwordrestriction"><![CDATA[Le mot de passe doit contenir 8 caractères, 1 majuscule et un caractère spécial(@#$%^&+=)]]></string>
-    <string name="confirmPassword">Confirmez le mot de passe</string>
+    <string name="setupd">Check for Update!</string>
+    <string name ="toggle">Toggle Night Mode</string>
+    <string name="conpassmsg">Password not matching</string>
+    <string name="passwordrestriction"><![CDATA[Password must be 8 characters, should contain 1 upper case and a special character (@#$%^&+=)]]></string>
+    <string name="confirmPassword">Confirm Password</string>
     <string name="refresh">"Page actualisée"</string>
 </resources>
