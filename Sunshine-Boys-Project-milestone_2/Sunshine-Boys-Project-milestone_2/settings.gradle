@@ -1,3 +1,0 @@
-include ':SendSMS'
-include ':app'
-rootProject.name = "SimpleWeather"
