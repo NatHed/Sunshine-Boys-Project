@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">567605697719-3q5u822v4bsrmgs5nvfjkuqmur5ub85d.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://sunshine-boys-app.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">567605697719</string>
+    <string name="google_api_key" translatable="false">AIzaSyCNhKiLdsOWLsdS4ijD3_ZpWY9TIpcKOYc</string>
+    <string name="google_app_id" translatable="false">1:567605697719:android:837a35d95e63e099684132</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCNhKiLdsOWLsdS4ijD3_ZpWY9TIpcKOYc</string>
+    <string name="google_storage_bucket" translatable="false">sunshine-boys-app.appspot.com</string>
+    <string name="project_id" translatable="false">sunshine-boys-app</string>
+</resources>
