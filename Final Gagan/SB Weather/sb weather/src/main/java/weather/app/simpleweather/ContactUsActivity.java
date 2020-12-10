@@ -2,10 +2,13 @@ package weather.app.simpleweather;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,31 +21,30 @@ public class ContactUsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_us);
+        setContentView(R.layout.fragment_contact);
 
 
+    }
 
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        super.onCreateOptionsMenu(menu);
+    }
 
-        BottomNavigationView bottomNavigationView1 = (BottomNavigationView) findViewById(R.id.bottom_navi);
-        bottomNavigationView1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_home:
-                        //Toast.makeText(ContactUsActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(ContactUsActivity.this, HomeActivity.class));
-                        break;
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Fragment selectedFragment = null;
+        switch (item.getItemId()) {
 
-                    case R.id.action_about:
-                        //Toast.makeText(ContactUsActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(ContactUsActivity.this, AboutActivity.class));
-                        break;
-                }
-                return true;
+            case R.id.logoutMenu: {
+
+                finish();
+                startActivity(new Intent(ContactUsActivity.this, LoginActivity.class));
+                break;
             }
-        });
 
 
+        }
+        return true;
     }
 
 

@@ -19,5 +19,29 @@
         android:title="@string/refreshMenu">
         </item>
 
+    <item
+        android:id="@+id/contactMenu"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:icon="@drawable/white_contactus"
+        android:title="@string/contactUs">
+    </item>
+
+    <item
+        android:id="@+id/aboutMenu"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:icon="@drawable/refresh_image_white"
+        android:title="@string/aboutUs">
+    </item>
+
+    <item
+        android:id="@+id/settingsMenu"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:icon="@drawable/refresh_image_white"
+        android:title="@string/settings">
+    </item>
+
 
 </menu>

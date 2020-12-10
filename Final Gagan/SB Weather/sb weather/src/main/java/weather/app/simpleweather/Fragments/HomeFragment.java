@@ -32,10 +32,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
+import weather.app.simpleweather.AboutActivity;
 import weather.app.simpleweather.AdapterActivity;
+import weather.app.simpleweather.ContactUsActivity;
 import weather.app.simpleweather.LoginActivity;
 import weather.app.simpleweather.ModelActivity;
 import weather.app.simpleweather.R;
+import weather.app.simpleweather.SettingsActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -87,6 +90,24 @@ public class HomeFragment extends Fragment {
 
                 getActivity().finish();
                 startActivity(new Intent(getActivity(), LoginActivity.class));
+                break;
+            }
+
+            case R.id.settingsMenu: {
+
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                break;
+            }
+
+            case R.id.aboutMenu: {
+
+                startActivity(new Intent(getActivity(), AboutActivity.class));
+                break;
+            }
+
+            case R.id.contactMenu: {
+
+                startActivity(new Intent(getActivity(), ContactUsActivity.class));
                 break;
             }
 

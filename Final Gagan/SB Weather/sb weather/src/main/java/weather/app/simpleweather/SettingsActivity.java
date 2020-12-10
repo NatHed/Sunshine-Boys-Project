@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.fragment.app.Fragment;
 
 import android.Manifest;
 import android.content.Context;
@@ -13,6 +14,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -31,27 +34,8 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.fragment_settings);
         checkupdate();
-
-        BottomNavigationView bottomNavigationView1 = (BottomNavigationView) findViewById(R.id.bottom_navi);
-        bottomNavigationView1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_home:
-                        //Toast.makeText(ContactUsActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
-                        break;
-
-                    case R.id.action_about:
-                        //Toast.makeText(ContactUsActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(SettingsActivity.this, AboutActivity.class));
-                        break;
-                }
-                return true;
-            }
-        });
 
 
         SeekBar seekBar = findViewById(R.id.seekbar);
@@ -125,6 +109,28 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
 
+    }
+
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Fragment selectedFragment = null;
+        switch (item.getItemId()) {
+
+            case R.id.logoutMenu: {
+
+                finish();
+                startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
+                break;
+            }
+
+
+        }
+        return true;
     }
 
 

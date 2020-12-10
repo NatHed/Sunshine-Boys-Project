@@ -1,41 +1,50 @@
 package weather.app.simpleweather;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import weather.app.simpleweather.Fragments.HomeFragment;
+
 public class AboutActivity extends AppCompatActivity {
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
-
-        BottomNavigationView bottomNavigationView1 = (BottomNavigationView) findViewById(R.id.bottom_navi);
-        bottomNavigationView1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_home:
-                        //Toast.makeText(AboutActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AboutActivity.this, HomeActivity.class));
-                        break;
-                    case R.id.action_about:
-                        //Toast.makeText(AboutActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AboutActivity.this, AboutActivity.class));
-                        break;
-                }
-                return true;
-            }
-        });
-
-
-
+        setContentView(R.layout.fragment_aboutus);
     }
+
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Fragment selectedFragment = null;
+        switch (item.getItemId()) {
+
+            case R.id.logoutMenu: {
+
+                finish();
+                startActivity(new Intent(AboutActivity.this, LoginActivity.class));
+                break;
+            }
+
+
+        }
+        return true;
+    }
+
 }
