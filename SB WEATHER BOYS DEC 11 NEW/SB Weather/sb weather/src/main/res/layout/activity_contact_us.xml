@@ -26,6 +26,7 @@
         android:id="@+id/number"
         android:layout_width="153dp"
         android:layout_height="32dp"
+        android:autoLink="phone"
         android:text="@string/pNumber"
         android:textColor="@color/white"
         android:textSize="22sp"

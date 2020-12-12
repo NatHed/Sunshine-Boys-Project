@@ -127,7 +127,7 @@ public class HomeActivity extends AppCompatActivity {
 
             case R.id.logoutMenu: {
                 firebaseAuth.signOut();
-                mGoogleSignInClient.signOut();
+               /* mGoogleSignInClient.signOut();*/
                 finish();
                 startActivity(new Intent(HomeActivity.this, LoginActivity.class));
                 break;
@@ -156,7 +156,6 @@ public class HomeActivity extends AppCompatActivity {
             }
 
             case R.id.contactUsMenu: {
-
                 startActivity(new Intent(HomeActivity.this, ContactUsActivity.class));
                 break;
             }

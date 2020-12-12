@@ -64,6 +64,16 @@ public class LoginActivity extends AppCompatActivity {
         uEmail.setText(checkemail);
         uPassword.setText(checkpassword);
 
+       String u_email = uEmail.getText().toString().trim();
+       String u_password = uPassword.getText().toString().trim();
+
+       SharedPreferences.Editor editor = sp.edit();
+       editor.putString("email",u_email);
+       editor.putString("password",u_password);
+       editor.apply();
+
+
+
 
         btnsgn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +82,13 @@ public class LoginActivity extends AppCompatActivity {
                 if(checkEmptySpace()) {
 
                     checkInfo(uEmail.getText().toString(), uPassword.getText().toString());
+                    String u_email = uEmail.getText().toString().trim();
+                    String u_password = uPassword.getText().toString().trim();
+                    SharedPreferences sp =getApplicationContext().getSharedPreferences("mypref", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sp.edit();
+                    editor.putString("email",u_email);
+                    editor.putString("password",u_password);
+                    editor.apply();
                 }
             }
         });
@@ -221,6 +238,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
+
 
 
     private boolean checkEmptySpace(){
