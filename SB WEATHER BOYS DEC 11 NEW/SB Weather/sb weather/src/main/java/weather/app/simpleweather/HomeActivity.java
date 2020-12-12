@@ -1,9 +1,7 @@
 package weather.app.simpleweather;
-
+//Sunshine Boys
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,13 +11,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
@@ -36,8 +31,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-import weather.app.simpleweather.Fragments.AboutFragment;
-import weather.app.simpleweather.Fragments.HomeFragment;
 import weather.app.simpleweather.Fragments.Room2Fragment;
 import weather.app.simpleweather.Fragments.Room3Fragment;
 
@@ -76,7 +69,6 @@ public class HomeActivity extends AppCompatActivity {
         bottomNavigationView1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment selectedFragment = null;
                 switch (item.getItemId()) {
                     case R.id.action_home:
                         startActivity(new Intent(HomeActivity.this, HomeActivity.class));
@@ -122,7 +114,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
-        Fragment selectedFragment = null;
         switch(item.getItemId()){
 
             case R.id.logoutMenu: {
@@ -223,11 +214,6 @@ public class HomeActivity extends AppCompatActivity {
                 JSONObject dataObject = weatherJson.getJSONObject("main");
                 JSONObject windsp_Object = weatherJson.getJSONObject("wind");
 
-
-               /* temperature.setText(dataObject.getString("temp"));
-                humidity.setText(dataObject.getString("humidity"));
-                wind_speed.setText(windsp_Object.getString("speed"));
-                air_pressure.setText(dataObject.getString("pressure"));*/
 
                 String temperature = (dataObject.getString("temp"));
                 String humidity = (dataObject.getString("humidity"));

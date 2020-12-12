@@ -31,7 +31,9 @@
                 android:textColor="#000000"
                 android:textSize="20sp"
 
-                ></TextView>
+                >
+
+            </TextView>
 
             <View
                 android:layout_width="match_parent"
@@ -54,7 +56,10 @@
                 android:text="@string/setver"
                 android:textColor="#000000"
 
-                android:textSize="20sp"></TextView>
+                android:textSize="20sp">
+
+
+            </TextView>
 
 
             <Button
@@ -67,7 +72,10 @@
                 android:layout_marginBottom="10dp"
                 android:text="@string/setupd"
                 android:textColor="#000000"
-                android:textSize="20sp"></Button>
+                android:textSize="20sp">
+
+
+            </Button>
 
 
             <View
@@ -88,7 +96,10 @@
                 android:layout_marginRight="25dp"
                 android:text="@string/brightness"
                 android:textColor="#000000"
-                android:textSize="20sp"></TextView>
+                android:textSize="20sp">
+
+
+            </TextView>
 
 
             <SeekBar

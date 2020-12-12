@@ -1,5 +1,5 @@
 package weather.app.simpleweather;
-
+//Sunshine Boys
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,26 +16,6 @@ public class AboutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-
-       /* BottomNavigationView bottomNavigationView1 = (BottomNavigationView) findViewById(R.id.bottom_navi);
-        bottomNavigationView1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_home:
-                        //Toast.makeText(AboutActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AboutActivity.this, HomeActivity.class));
-                        break;
-                    case R.id.action_about:
-                        //Toast.makeText(AboutActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AboutActivity.this, AboutActivity.class));
-                        break;
-                }
-                return true;
-            }
-        });*/
-
-
 
     }
 }

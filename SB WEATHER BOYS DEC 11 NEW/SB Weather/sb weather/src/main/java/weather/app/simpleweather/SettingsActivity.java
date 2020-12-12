@@ -1,6 +1,5 @@
 package weather.app.simpleweather;
-
-import androidx.annotation.NonNull;
+//Sunshine Boys
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
@@ -18,18 +17,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Toast;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
-
-import java.net.URI;
-
 import static weather.app.simpleweather.sb_weather_app.Channel_1_ID;
 import static weather.app.simpleweather.sb_weather_app.Channel_2_ID;
 
@@ -48,25 +41,6 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         checkupdate();
 
-        /*BottomNavigationView bottomNavigationView1 = (BottomNavigationView) findViewById(R.id.bottom_navi);
-        bottomNavigationView1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_home:
-                        //Toast.makeText(ContactUsActivity.this, "@string/homePage", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
-                        break;
-
-                    case R.id.action_about:
-                        //Toast.makeText(ContactUsActivity.this, "@string/abouUs", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(SettingsActivity.this, AboutActivity.class));
-                        break;
-                }
-                return true;
-            }
-        });
-*/
 
         SeekBar seekBar = findViewById(R.id.seekbar);
 

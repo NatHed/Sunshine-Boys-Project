@@ -70,6 +70,11 @@
     <string name="permissionMsg">Please allow the app permission</string>
     <string name="save_settings">Save Settings</string>
     <string name="save_settings_con">Settings have been saved</string>
+    <string name="permission_needed">Permission needed</string>
+    <string name="permission_message">For making phone calls from app</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
 
 
 

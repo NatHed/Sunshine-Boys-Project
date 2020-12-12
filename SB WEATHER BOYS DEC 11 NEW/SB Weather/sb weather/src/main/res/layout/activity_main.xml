@@ -7,22 +7,6 @@
     android:background="@drawable/background_greenery"
     tools:context=".LoginActivity">
 
-<!--
-        <RelativeLayout
-            android:id="@+id/background_pic"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
-
-
-        </RelativeLayout>
-
--->
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"

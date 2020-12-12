@@ -72,4 +72,9 @@
 
     <string name="save_settings">Enregistrer les paramètres</string>
     <string name="save_settings_con">Les paramètres ont été sauvegardés</string>
+
+    <string name="permission_needed">Autorisation nécessaire</string>
+    <string name="permission_message">Pour passer des appels téléphoniques depuis l\'application</string>
+    <string name="ok">D\'accord</string>
+    <string name="cancel">Annuler</string>
 </resources>

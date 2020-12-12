@@ -1,5 +1,5 @@
 package weather.app.simpleweather;
-
+//Sunshine Boys
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -150,6 +150,7 @@ public class LoginActivity extends AppCompatActivity {
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
+
     }
 
     @Override
@@ -179,6 +180,8 @@ public class LoginActivity extends AppCompatActivity {
                 Uri personPhoto = acct.getPhotoUrl();
 
                 Toast.makeText(this, getString(R.string.googlewelcomeMsg) +personName, Toast.LENGTH_SHORT).show();
+
+            uEmail.setText(personEmail);
 
             }
 
