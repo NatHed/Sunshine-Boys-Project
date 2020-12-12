@@ -26,7 +26,11 @@ allprojects {
         }
     }
 }
-
+android {
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
